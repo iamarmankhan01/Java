@@ -1,0 +1,4 @@
+A lanoda expression is a kind of an anonymous function. its a method without a declaration,
+i.e., access modifier, return value declaration, and name. Lambda expression eliminates the need of anonymous class and gives a very simple yet powerful functional programming capability to Java.
+
+Lambda expressions in Java is usual written using syntax (argument) -> (body) * /

@@ -1,0 +1,11 @@
+The ThreadLocal class in Java enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to a ThreadLocal variable, then the two threads cannot see each other's ThreadLocal variables.
+
+Creating a ThreadLocal=>>>
+I Here is a code example that shows how to create a ThreadLocal variable:
+private ThreadLocal myThreadLocal = new ThreadLocal () ;
+As you can see, you instantiate a new Threadlocal object. This only needs to be done once, and it doesn't matter which thread does that. All threads will see the same ThreadLocal instance, but the values set on the ThreadLocal via its set() method will only be visible to the thread who set the value. Even if two different threads set different values on the same ThreadLocal object, they cannot see each other's values.
+
+======================================================================================
+
+Accessing a ThreadLocal
+Once a ThreadLocal has been created you can set the value to be stored in it like this:

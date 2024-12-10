@@ -1,0 +1,15 @@
+The provided Java code has several issues, including syntax errors and logical mistakes. Below are the identified issues and their corrections:
+
+Issues:
+Incorrect Method Name:
+
+The method getOraclConnection is incorrectly named. It should be getOracleConnection to match the method call in main.
+Incorrect Import:
+
+The import java.beans.Statement; is incorrect. It should be import java.sql.Statement;.
+Typo in SQL Statement:
+
+The line st.executeUpdate("inset into survey (id,name) values (9,'messa')"); contains a typo. It should be insert instead of inset.
+Statement Class Usage:
+
+The Statement is incorrectly declared as java.beans.Statement. Replace it with java.sql.Statement.

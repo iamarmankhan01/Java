@@ -1,0 +1,122 @@
+Map Interface---->>>
+A Map defines mapping from keys to values. The key value pair is called entry.A Map does not allow duplicate keys that means keys are unique.Each key maps to one value which is called single valued map.Both the keys and values must be Object. Map is not Collection and the Map interface does not extend the Collection interice.
+
+
+public Object put(Object k,Object v)
+
+public Object remove(Object k)
+
+public int size()
+
+public Collection values()
+
+public Set keySet()
+
+public Object get(Object k)
+w
+public boolean isEmpty() 
+
+public void clear();
+
+public boolean containsKey(Object k)
+
+public void putAll(Map m)
+
+public Set entrySet()
+
+
+//===================================Drawing=======================
+
+
+
+#Points On Hash Map:-
+The class whose object u want to add in HashMap as key that class must override two
+methods of object class.
+a) public int hashcode();
+b) public boolean equals (object o)
+
+1. HashMap class has a one nested class with a name Entry (Node from jdk1.8) which implements a one interface called Map.Entry interface.
+
+2. Map interface is also having a one nested interface called Entry and this interface has
+got three methods.
+  -> public Object getKey();
+  -> public Object getValue();
+  -> public int hashCode();
+3. whenever we create the object of HashMap class using the default constructor than one Entry (Node from jdkl.8) class array will be created of size 16 which is known as capacity of Hashmap.
+
+4. Each index of this array is called a bucket.
+
+5. And each bucket is a linked list.
+
+6. whenever we add any key value pair in a Hashmap class using a put method, the put method first convert this key value pair into the single object of a Entry (Node from jdkl. 8) class and this Entry (Node from jdk1.8) class object is going to be stored into the array of this class which is defined in a HashMap class.
+
+######How an Entry(Node from jdk 1.8) class object is stored in a array?
+
+Step I: The HashCode of the Key class Object is first calculated.
+Step II: Calculating the remainder of this hashcode by dividing it via total number of bucket or capacity.
+Step III: This remainder is treated as a index of bucket.
+Step IV: Once the bucket is decided than the equals method is called on a Key class Object and than passes existing Key class Object into this method one by one.
+
+If the KeyMatch is found than the Entry (Node from jdkl.8) class object is not added into the bucket but value of the key will be repalced by new value otherwise this Entry class object is added in a bucket as a first node of a linked list which is maintained by a bucket.
+
+#Some Important Points on HashMap=====>>
+
+1. The default size of an array is 16 (always power of 2) and the loadfactor is 0.75  .LoadFactor means whenever the size of the HashMap reaches to 75% of its current size ie. 12 , it will double its size by recomputing the hashcodes of existing data structre elements.
+
+2. Hence to avoid rehashing of the data structure(as it degrade the performance) as elements grow it is the best practice to explicitly give the size of the hashmap while creating it. Never give the capacity too high and load Factor too low.
+
+3. Since java is multithreaded it is very possible that more than one thread might be using same hashmap and then they both realize the need for resizing the  hashmap at the sametime which leads to race condition.
+
+4. What is race condition with respect to hashmaps :--
+
+when two or more threads see the need for resizing the same hashmap, they might end up adding the elements of old bucket to the new bucket simultanously and hence might lead to infinite loops. in case of collision, i.e. when there are different keys with same hashcode, internally we use single linked list to store the elements. And we store every new element at the head of the linked list to avoid tail traversing and hence at the time of resizing the entire sequence of objects in linked list gets reversed, during which there are chances
+of infinite loops.
+
+For example, lets assume there are 3 keys with same hashcode and hence stored in linked list inside a bucket [below format is in object_Value (current_ address, next_ address)]
+
+Initial Structure: 1(100,200) ->2 (200,300) -> (300, null)
+After resizing by thread-1 : 3(300,200) ->2 (200,100) -> (100, null)
+when thread-2 starts resizing, its again starts with 1st element by placing it at the head:
+(100,300) ->3 (300,200) ->2 (200,100) ===>which becomes a infinite loop for next insertion and thread hangs here.
+
+
+#HashMap has a static class named Entry (Node from jdk1. 8) which implements Map. Entry interface. 
+The Entry class looks like:
+
+static class Entry (Node from jdk1.8) implements Map.Entry
+{
+final Object key;
+object Value;
+final int hash;
+Entry next;
+Entry (int i, Object obj, Object obj1, Entry entry)
+{
+value=obj1;
+next=entry; 
+key=obj;
+hash=i;
+}
+//other method
+}
+
+
+Every time we insert into hashmap using put() method, a new Entry (Node from jdk1.8) object is created (not true in some cases. If key already exists, then it just replace the value). Map internally used two data structures to manage/store data.
+
+
+#HashMap class
+
+The HashMap class uses a HashTable to implement the Map interface. The HashMap class is not threadsafe and permits one null key and null value. The HashMap Class is roughly equivalent to the Hashtable except that it is unsyncronized and permits null. This class makes no gaurantee as to the order of the map.
+HashMap can be synchronized by using a method
+
+Map m=Collections.synchronizedMap (Map m) (new Hashmap());
+
+Constructors Of HashMap->
+There are four types of constructors in HashMap as shown below :
+
+1. HashMap (): It is a default hash map.(default capacity=16, default loadFactor=.75)
+
+2. HashMap (Map m): It initializes the hash map by using the elements of m.
+
+3. HashMap (int capacity): It initializes the capacity of the hash map to capacity. The default initial capacity of HashMap will be 16 and the load factor will be 0.75. Load factor represents at what level HashMap should be doubled.
+
+4. HashMap (int capacity, float loadfactor): It initializes both capacity and loadfactor by using its arguments.

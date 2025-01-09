@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Area {
+public class AreaFind {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
 

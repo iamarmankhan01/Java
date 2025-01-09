@@ -162,6 +162,8 @@ class Test extends Demo {
         obj.get();
     }
 }
+
+
 //Output a=10
 
 */

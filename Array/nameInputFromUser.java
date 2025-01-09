@@ -1,8 +1,10 @@
+
 import java.util.Scanner;
 
 public class nameInputFromUser {
+
     public static void main(String[] args) {
-          Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array lenght :");
         int n = sc.nextInt();
         String name[] = new String[n];

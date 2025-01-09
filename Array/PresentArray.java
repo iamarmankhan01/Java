@@ -5,7 +5,6 @@ public class PresentArray {
         boolean c = false;
         for (float element : marks) {
             if (num == element) {
-
                 c = true;
                 break;
             }
@@ -17,3 +16,5 @@ public class PresentArray {
         }
     }
 }
+
+

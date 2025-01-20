@@ -66,4 +66,76 @@ int even = number.stream().filter(x->x%2==0).reduce(0,(ans,i)-> ans+i);
 Here ans variable is assigned 0 as the initial value and i is added to it.
 
 
+****************************************************************************
+
+Optional is a way of replacing a nullable T reference with a non-null value. An Optional may either contain a non-null T reference (in which case we say the reference is "present"), or it may contain nothing (in which case we say the reference is "absent").
+
+Remember that it is never said that optional "contain null".
+
+Optional<Integer> canBeEmpty1 = Optional.of(5);
+canBeEmpty1.isPresent();  // returns true
+canBeEmpty1.get();        // returns 5
+Optional<Integer> canBeEmpty2 = Optional.empty();
+canBeEmpty2.isPresent);          // returns false
+You can also view Optional as a single-value container that either contains a value or doesn't.
+Creating Optional objects
+There are 3 major ways to create an Optional.
+i) Use Optional.empty() to create empty optional.
+Optional<Integer › possible = Optional.empty;
+ii) Use Optional.of() to create optional with default non-null value. If you pass null in of(), then a NullPointerException is thrown immediately.
+Optional Integer> possible = Optional.of(5);
+FalMapMethod pra 1X3
+iii) Use Optional.ofNullable() to create an Optional object that may hold a null value. If parameter is null, the
+
+resulting Optional object would be empty (remember that value is absent; don't read it null).
+
+Optional<Integer > possible = Optional.ofNullable(null);
+//ог
+Optional<Integer> possible = Optional.ofNullable(5);
+
+b) Do something If Optional value is present
+You got your Optional object is first step. Now let's use it after checking whether it holds any value inside it.
+Optional <Integer> possible = Optional.of(5);
+possible.ifPresent(System.out::printin);
+if(possible.isPresent)K
+System.out.printin(possible.get());
+
+Java Boxed Stream Example
+Java a boxed stream is a stream of the wrapper class instances to simulate a stream of primitives.
+1. What is a Boxed Stream?
+In Java 8, if we want to convert a stream of objects to a collection then we can use one of the static methods in the Collectors class.
+List<String> strings = Stream.of("appsquadz", "noida", "delhi", "gurugram", "Meerut")
+.collect(Collectors.toList());
+However, the same process doesn't work on streams of primitives.
+/Compilation Error !!
+IntStream.of(1,2,3,4,5)
+.collect(Collectors.toList());
+To convert a stream of primitives, we must first box the elements in their wrapper classes and then collect the wrapped objects in a collection. This type of stream is called boxed stream.
+2. IntStream (Stream of int)
+Example to convert int stream to List of Integers.
+List<Integer > ints = IntStream.of(1,2,3,4,5)
+.boxed()
+.collect(Collectors.toList());
+System.out.println(ints);
+/Stream operations directly
+Optional<Integer> max = IntStream.of(1,2,3,4,5)
+.boxed()
+.max(Integer.:compareTo);
+System.out.printin(max);
+3. LongStream (Stream of long)
+Example to convert long stream to List of Longs.
+List<Long> longs = LongStream.of(11,21,31,41,5l)
+.boxed()
+-collect(Collectors.toList());
+System.out.printin(longs);
+4. DoubleStream (Stream of double)
+Example to convert double stream to List of Doubles.
+List<Double> doubles = DoubleStream.of(1d,2d,3d,4d,5d)
+.boxed()
+.collect(Collectors.toList());
+System.out.println(doubles);
+
+
+
+
 

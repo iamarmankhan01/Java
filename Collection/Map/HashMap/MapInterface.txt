@@ -1,8 +1,8 @@
 Map Interface---->>>
-A Map defines mapping from keys to values. The key value pair is called entry.A Map does not allow duplicate keys that means keys are unique.Each key maps to one value which is called single valued map.Both the keys and values must be Object. Map is not Collection and the Map interface does not extend the Collection interice.
+A Map defines mapping from keys to values. The key value pair is called entry. A Map does not allow duplicate keys that means keys are unique. Each key maps to one value which is called single valued map. Both the keys and values must be Object. Map is not Collection and the Map interface does not extend the Collection interface.
 
 
-public Object put(Object k,Object v)
+public Object put(Object k, Object v)
 
 public Object remove(Object k)
 
@@ -13,7 +13,7 @@ public Collection values()
 public Set keySet()
 
 public Object get(Object k)
-w
+
 public boolean isEmpty() 
 
 public void clear();
@@ -61,7 +61,7 @@ If the KeyMatch is found than the Entry (Node from jdkl.8) class object is not a
 
 #Some Important Points on HashMap=====>>
 
-1. The default size of an array is 16 (always power of 2) and the loadfactor is 0.75  .LoadFactor means whenever the size of the HashMap reaches to 75% of its current size ie. 12 , it will double its size by recomputing the hashcodes of existing data structre elements.
+1. The default size of an array is 16 (always power of 2) and the loadfactor is 0.75  . LoadFactor means whenever the size of the HashMap reaches to 75% of its current size ie. 12 , it will double its size by recomputing the hashcodes of existing data structre elements.
 
 2. Hence to avoid rehashing of the data structure(as it degrade the performance) as elements grow it is the best practice to explicitly give the size of the hashmap while creating it. Never give the capacity too high and load Factor too low.
 

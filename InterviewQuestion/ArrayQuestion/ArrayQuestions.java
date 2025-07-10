@@ -152,8 +152,9 @@ public class ArrayQuestions {
        System.out.println("Largest: "+ans[1]);
     }
 } 
-
- */
+    
+*/
+ 
 
  //5 - find the smallest and largest elements in an array without sorting.
 
@@ -184,6 +185,7 @@ public class ArrayQuestions {
 
  //6 - Find the total number of pairs in the array whose sum is equal to the given value . Example target =12
 
+ /* 
  
 import java.util.Scanner;
 public class ArrayQuestions {
@@ -220,6 +222,8 @@ public class ArrayQuestions {
     }
 } 
 
+
+*/
 
 
 //Count the number of triple whose sum is equal to the given value x 

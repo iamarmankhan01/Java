@@ -2,7 +2,7 @@
 public class Array {
 
     public static void main(String[] args) {
-        //?++++++++++++++++++>>>>>>>Add========++++++
+        //?++++++++++++++++++>>>>>>>Add array value========++++++
 
         // int n[]={1,3,5};
         // int sum=0;
@@ -10,7 +10,11 @@ public class Array {
         //   sum =sum+s;
         // }
         // System.out.println(sum);
+
+        
         // ===============>>>>>>>>>>.Max Number===========
+
+
         // int n[] = {1, 5, 3, 8, 12, 56, 8, 7, 2};
         // int ans = 0;
         // for (int m : n) {
@@ -19,6 +23,8 @@ public class Array {
         //     }
         // }
         // System.out.println(ans);
+
+
         //==============>>>>>>find the number and index print
         // int n[] = {1, 5, 3, 8, 12, 56, 8, 7, 2};
         // int f = 12;

@@ -104,6 +104,8 @@ public class Interview {
         /* Output: 
                            Enter the number:10
                            0 1 1 2 3 5 8 13 21 34 */
+
+
         //   System.out.println("Enter the Number");
         //   int n = sc.nextInt();
         //   int a =0 ,b =1;
@@ -121,6 +123,7 @@ public class Interview {
         
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<==Reverse Number===>>>>>>>>>>>>>>>>>>>>>>>
+
         // System.out.println("Enter the number:");
         // int n = sc.nextInt();
         // int reverseNumber=0;
@@ -219,6 +222,8 @@ public class Interview {
 
 
 //================== Java program to swap three variables==================
+
+
 // public class Interview {
 //   static int a, b, c;
 //   static void swapThree() {
@@ -240,6 +245,7 @@ public class Interview {
 
 //======================== string reverse===========================
 // =============used string builder to reverse=================
+
 // String st = "namrA";
 // StringBuilder str2 = new StringBuilder();
 // str2.append(st);
@@ -263,7 +269,7 @@ public class Interview {
         // String str[] = n.split(" ");
         // String newStr = "";
         // for(int i=str.length-1; i>=0; i--){
-        //     newStr = newStr + str[i] + " ";
+        //     newStr = newStr + str[i] + " "; //space dete se 
         // }
         // System.out.println(newStr);
         

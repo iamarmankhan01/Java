@@ -206,13 +206,13 @@ public class Interview {
 
 // public class Interview { 
 //     public static void main(String[] args) {
-//         int a = 12, b = 24;
+//         int a = 10, b = 20;
 //         System.out.println("--Before swap--");
 //         System.out.println("First number = " + a);
 //         System.out.println("Second number = " +b);
-//         a = a + b;
-//         b = a - b;
-//         a = b - a;
+//                a = a + b; // a = 30
+//                b = a - b; // b = 10 (original a)
+//                a = a - b; // a = 20 (original b)
 //         System.out.println("--After swap--");
 //         System.out.println("First number = " + a);
 //         System.out.println("Second number = " + b);

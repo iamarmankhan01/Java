@@ -1,0 +1,53 @@
+Casting in Java:-
+Converting a particular data type into required datatype is called 
+type casting.
+
+********************************
+What is class upcasting?
+++++++++++++++++++++++++++++++++
+we store child class object address into parent class reference variable, so that reference variable becomes re-usable
+
+Example: Reusing reference variable
+
+public class A {
+	
+}
+
+public class B extends A{
+
+}
+
+public class C extends A{
+	public static void main(String[] args) {
+		A a1 = new B();
+		System.out.println(a1);
+		a1 = new C();
+		System.out.println(a1);
+	}
+}
+
+
+***************************
+What is class downcasting?
++++++++++++++++++++++++++++
+-> Here we store parent class object address into child class reference variable.
+-> To perform downcasting, firstly do upcasting and then perform downcasting.
+Example:
+---------
+public class A {
+	
+}
+public class B extends A{
+	
+}
+public class C extends A{
+	 
+	public static void main(String[] args) {
+		
+		A a1 = new B();
+		if(a1 instanceof B) {
+			B b1 = (B)a1;
+			System.out.println("Downcasting successful!");
+		}
+	}
+}

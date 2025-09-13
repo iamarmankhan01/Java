@@ -1,1 +1,0 @@
-Java is a programming language and computing platform that's used to create many types of applications, including mobile apps, web apps, and enterprise software:
